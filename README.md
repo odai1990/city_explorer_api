@@ -68,3 +68,43 @@ Finish time: 01:00
 
 Actual time needed to complete: 5 min
 
+
+Number and name of feature: #5 Data Formatting
+
+Estimate of time needed to complete: 5 min
+
+Start time: 10:20
+
+Finish time: 10:23
+
+Actual time needed to complete: 3 min
+
+Number and name of feature: #6 Locations
+
+Estimate of time needed to complete: 15 min
+
+Start time: 10:25
+
+Finish time: 10:50
+
+Actual time needed to complete: 25 min
+
+Number and name of feature: #7 Weather
+
+Estimate of time needed to complete: 20 min
+
+Start time: 11:05
+
+Finish time: 11:30
+
+Actual time needed to complete: 25 min
+
+Number and name of feature: #8 Parks
+
+Estimate of time needed to complete: 20 min
+
+Start time: 11:40
+
+Finish time: 12:20
+
+Actual time needed to complete: 20 min
