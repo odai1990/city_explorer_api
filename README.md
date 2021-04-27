@@ -108,3 +108,14 @@ Start time: 11:40
 Finish time: 12:20
 
 Actual time needed to complete: 20 min
+
+
+
+Number and name of feature: #9 database
+
+Estimate of time needed to complete: 6 hours
+
+Start time: 4
+
+Finish time: 10
+Actual time needed to complete: 6 hours
