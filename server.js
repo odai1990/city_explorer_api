@@ -24,7 +24,7 @@
  function Location(locData) {
 
 
-    this.search_query = 'Lynnwood';
+        this.search_query = cityName;
     this.formatted_query = locData[0].display_name;
      this.latitude = locData[0].lat;
      this.longitude = locData[0].lon;
