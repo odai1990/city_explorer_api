@@ -46,6 +46,11 @@ function Location(cityName, geoData) {
 
 
 function locatine(req, res) {
+    if(req.query.city===''||req.query.city===undefined||req.query.city===null)
+    {
+        res.send('Please Inseart City Name!');
+        return;
+    }
     let cityName = req.query.city;
     const queryDataBase = 'SELECT * FROM locations WHERE search_query = $1';
     const valuesDataBase = [req.query.city];
@@ -54,9 +59,9 @@ function locatine(req, res) {
         .then(result => {
             if (result.rows.length > 0) {
                 res.send(result.rows[0]);
-                console.log(11111111111)
+                
             } else {
-                console.log(22222222)
+                
                 let key = process.env.LOCATION_KEY;
                 let LocURL = `https://eu1.locationiq.com/v1/search.php?key=${key}&q=${cityName}&format=json`;
                 superagent.get(LocURL)
@@ -83,6 +88,12 @@ function locatine(req, res) {
 
 
 function weather(req, res) {
+
+    if(req.query.search_query===''||req.query.search_query===undefined||req.query.search_query===null)
+    {
+        res.send('Please Inseart City Name!');
+        return;
+    }
     let cityName = req.query.search_query;
     // console.log(cityName)
     let key = process.env.WEATHER_KEY;
@@ -112,6 +123,11 @@ function Park(gData) {
     this.url = gData.url;
 }
 function park(req, res) {
+    if(req.query.search_query===''||req.query.search_query===undefined||req.query.search_query===null)
+    {
+        res.send('Please Inseart City Name!');
+        return;
+    }
     let cityName = req.query.search_query;
     let key = process.env.PARK_KEY;
     let LocURL = `https://developer.nps.gov/api/v1/parks?q=${cityName}&api_key=${key}`;
@@ -132,6 +148,8 @@ function park(req, res) {
 
 function Movies(gData) {
 
+//seattle
+ 
     this.title = gData.original_title;
     this.overview = gData.overview;
     this.average_votes = gData.vote_average;
@@ -141,6 +159,11 @@ function Movies(gData) {
     this.released_on = gData.release_date;
 }
 function movies(req, res) {
+    if(req.query.search_query===''||req.query.search_query===undefined||req.query.search_query===null)
+    {
+        res.send('Please Inseart City Name!');
+        return;
+    }
     let cityName = req.query.search_query;
     console.log(req.query.search_query)
     let key = process.env.MOVIES;
@@ -166,6 +189,11 @@ function Yelp(gData) {
     this.url = gData.url;
 }
 function yelp(req, res) {
+    if(req.query.search_query===''||req.query.search_query===undefined||req.query.search_query===null)
+    {
+        res.send('Please Inseart City Name!');
+        return;
+    }
     let cityName = req.query.search_query;
     console.log(req.query.search_query)
     let key = process.env.YELP;
